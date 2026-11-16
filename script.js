@@ -88,19 +88,19 @@
 // Condição 4: Se a parcela for até 30% da renda e o score for 800 ou mais: 
 // "Crédito pré-aprovado: Taxa VIP reduzida!"
 
-const rendaMensal = +prompt('Digite sua renda mensal.')
-const valorParcela = +prompt('Valor da parcela.')
-const scoreSerasa = +prompt('Digite seu score de crédito.')
+// const rendaMensal = +prompt('Digite sua renda mensal.')
+// const valorParcela = +prompt('Valor da parcela.')
+// const scoreSerasa = +prompt('Digite seu score de crédito.')
 
-if (rendaMensal <= 0 || scoreSerasa <= 0 || scoreSerasa >= 1000) {
-    console.log('Erro: Dados financeiros inválidos.');
-} else if ((rendaMensal * 0.3) < valorParcela || scoreSerasa < 400) {
-    console.log('Crédito negado: Risco elevado ou renda comprometida.');
-} else if ((rendaMensal * 0.3) >= valorParcela && scoreSerasa >= 400 && scoreSerasa <= 799) {
-    console.log('Crédito aprovado: Taxa de juros padrão.');
-} else if ((rendaMensal * 0.3) >= valorParcela && scoreSerasa > 800) {
-    console.log('Crédito pré-aprovado: Taxa VIP reduzida!');
-}
+// if (rendaMensal <= 0 || scoreSerasa <= 0 || scoreSerasa >= 1000) {
+//     console.log('Erro: Dados financeiros inválidos.');
+// } else if ((rendaMensal * 0.3) < valorParcela || scoreSerasa < 400) {
+//     console.log('Crédito negado: Risco elevado ou renda comprometida.');
+// } else if ((rendaMensal * 0.3) >= valorParcela && scoreSerasa >= 400 && scoreSerasa <= 799) {
+//     console.log('Crédito aprovado: Taxa de juros padrão.');
+// } else if ((rendaMensal * 0.3) >= valorParcela && scoreSerasa > 800) {
+//     console.log('Crédito pré-aprovado: Taxa VIP reduzida!');
+// }
 
 // 5. Sistema de Precificação Dinâmica para App de Transporte (Foco em Cálculos + Ranges)
 // Cenário: O algoritmo de um aplicativo de corridas ajusta o valor final da viagem multiplicando o preço base conforme a demanda da região 
@@ -235,6 +235,8 @@ if (rendaMensal <= 0 || scoreSerasa <= 0 || scoreSerasa >= 1000) {
 // Tarefa: Crie as variáveis const kwhConsumido, const kwhGeradoSolar, const tarifaBaseKwh (ex: 0.85) 
 // e const altoConsumoPico (booleano). Calcule o saldo líquido (kwhConsumido - kwhGeradoSolar) 
 // e implemente as regras abaixo:
+
+
 // Se kwhConsumido for menor que 0, kwhGeradoSolar for menor que 0, ou 
 // tarifaBaseKwh for menor ou igual a 0: "Erro de leitura: Valores de medição ou tarifa inválidos."
 
@@ -258,17 +260,30 @@ if (rendaMensal <= 0 || scoreSerasa <= 0 || scoreSerasa >= 1000) {
 // imprima "Bandeira Vermelha (Pico). Total a pagar: R$ " + total
 
 
-const kwhConsumido = +prompt('Digite o kWh consumido')
-const kwhGeradoSolar = +prompt('Digite o kWh gerado')
-const tarifaBaseKwh = 0.85
-const altoConsumoPico = prompt('Pico de consumo? (sim/não)') === 'sim'
-const saldoLiquido = kwhConsumido - kwhGeradoSolar
-const taxaMinima = 50;
+// const kwhConsumido = +prompt('Digite o kWh consumido')
+// const kwhGeradoSolar = +prompt('Digite o kWh gerado')
+// const tarifaBaseKwh = 0.85
+// const altoConsumoPico = prompt('Pico de consumo? (sim/não)') === 'sim'
+// const saldoLiquido = kwhConsumido - kwhGeradoSolar
+// const taxaMinima = 50;
 
-if (kwhConsumido < 0 || kwhGeradoSolar < 0 || tarifaBaseKwh <= 0) {
-    console.log('Erro de leitura: Valores de medição ou tarifa inválidos.');
+// if (kwhConsumido < 0 || kwhGeradoSolar < 0 || tarifaBaseKwh <= 0) {
+//     console.log('Erro de leitura: Valores de medição ou tarifa inválidos.');
 
-} else if (saldoLiquido <= 0) {
-    const credito = Math.abs(saldoLiquido);
-    console.log('Crédito gerado:', credito, 'kWh. Fatura mínima: R$', taxaMinima);
-}
+// } 
+// else if (saldoLiquido <= 0) {
+//     const credito = Math.abs(saldoLiquido);
+//     console.log('Crédito gerado:', credito, 'kWh. Fatura mínima: R$', taxaMinima);
+// } 
+
+// else if (saldoLiquido >= 1 && saldoLiquido <= 150) {
+//     console.log('Total a pagar: R$', saldoLiquido * tarifaBaseKwh + 50);
+// } 
+
+// else if (saldoLiquido > 150 && altoConsumoPico === false)
+//     {console.log('Bandeira Amarela. Total a pagar: R$', (saldoLiquido * tarifaBaseKwh * 1.15) +50);
+// }
+
+// else if (saldoLiquido > 150 && altoConsumoPico === true)
+//     {console.log('Bandeira Vermelha (Pico). Total a pagar: R$', (saldoLiquido * tarifaBaseKwh * 1.30) +50);
+// }
