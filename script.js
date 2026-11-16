@@ -177,6 +177,9 @@
 // const modoEconomia = prompt('Está no modo de economia? (sim/não)') === 'sim'
 
 // const mediaDosSensores = (sensor1 + sensor2) / 2;
+// console.log('Sensor1' + sensor1 + '°C' );
+// console.log('Sensor2' + sensor2 + '°C');
+// console.log('mediaDosSensore' + mediaDosSensores + '°C');
 
 // if (Math.abs(sensor1 - sensor2) > 10) {
 //     console.log('Alerta de Hardware: Falha na leitura dos sensores.');
